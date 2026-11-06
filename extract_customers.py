@@ -189,10 +189,10 @@ def main():
     try:
         users = fetch_users()
 
-        print("=== STRUCTURE ANALYSIS ===\n")
+        print("===============STRUCTURE ANALYSIS=================\n")
         describe_structure(users)
 
-        print("=== CORE FIELDS ===")
+        print("===============CORE FIELDS========================")
         core_fields = extract_core_fields(users)
 
 
@@ -200,6 +200,7 @@ def main():
             print(field)
 
         names, id_email, city = build_structures(users)
+        
 
 
         print(f"Names Count: {len(names)}")
@@ -217,7 +218,7 @@ def main():
 
         output_file =export_csv(df)
 
-        print("=== SUMMARY ===")
+        print("================SUMMARY=========================")
         print(f"Users Processed: {len(users)}")
         print(f"CSV exported to: {output_file}")
     
